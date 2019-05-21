@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem Tra Nam Nhuan</title>
+</head>
+<body>
+<div class="namnhuan">
+    <input type="text" id="nhapnam" value="">
+    <input type="submit" value="Check" onclick="leapyear()">
+    <input type="text" value="" id="result" readonly>
+    <script>
+        function leapyear() {
+            let inputyear = parseInt(document.getElementById("nhapnam").value);
+            if (inputyear % 4 == 0) {
+                if (inputyear % 100 == 0) {
+                    if (inputyear % 400 == 0) {
+                        document.getElementById("result").value = "Nam vua nhap la nam nhuan"
+                    } else {
+                        document.getElementById("result").value = "Nam vua nhap k la nam nhuan"
+                    }
+                } else {
+                    document.getElementById("result").value = "Nam vua nhap la nam nhuan"
+                }
+            } else {
+                document.getElementById("result").value = "Nam vua nhap k la nam nhuan"
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

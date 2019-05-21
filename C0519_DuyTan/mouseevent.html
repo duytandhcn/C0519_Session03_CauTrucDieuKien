@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Su Kien Chuot</title>
+</head>
+<body>
+    <form>
+        <img src="img/index.jpeg" id="nobita"/>
+        <p>Click me to move picture</p>
+        <input type="button" value="Click me" onclick="moveRight();" />
+    </form>
+    <div class="mouseevent">
+        <script>
+            let hinhanh = null;
+            hinhanh = document.getElementById('nobita');
+            function init() {
+                hinhanh = document.getElementById('nobita');
+                hinhanh.style.position = 'relative';
+                hinhanh.style.left = '0px';
+            }
+            function moveRight() {
+                hinhanh.style.left = parseInt(hinhanh.style.left) + 10 + 'px';
+            }
+            window.onload = init;
+        </script>
+    </div>
+</body>
+</html>

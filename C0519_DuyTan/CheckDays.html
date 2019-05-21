@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra so ngay cua thang</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="inputmonth" value="">
+        <input type="button" value="Check" onclick="checkday()">
+        <input type="text" id="days" value="" readonly>
+        <script>
+            function checkday() {
+                let month = parseInt(document.getElementById("inputmonth").value);
+                if (month > 12 || month < 1) {
+                    document.getElementById("days").value = "Thang khong ton tai"
+                } else {
+                    switch (month) {
+                        case 2:
+                            document.getElementById("days").value = "Thang co 28 hoac 29 ngay";
+                            break;
+                        case 4:
+                        case 6:
+                        case 9:
+                        case 11:
+                            document.getElementById("days").value = "Thang co 30 ngay";
+                            break;
+                        default:
+                            document.getElementById("days").value = "Thang co 31 ngay";
+                            break;
+                    }
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
